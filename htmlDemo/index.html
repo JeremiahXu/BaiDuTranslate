@@ -22,6 +22,7 @@
             <button onclick="translate2()">翻译</button>
         </div>
         <div>
+            <p id="p1">结果：</p>
             <p>可打开浏览器控制台查看结果</p>
         </div>
     </div>
@@ -63,7 +64,7 @@
                 },
                 success: function (data) {
                     console.log(data);
-                    $("p").text('结果: \n ' + data.trans_result[0].dst);
+                    $("#p1").text('结果: \n ' + data.trans_result[0].dst);
                 }
             });
         }
